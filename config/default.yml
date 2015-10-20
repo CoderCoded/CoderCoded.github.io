@@ -1,0 +1,13 @@
+port: 3000
+
+to: your@mail.com
+
+prefix: "[WebContact] "
+
+smtp:
+  port: 25
+  host: add.your.mail.host
+  secure: false
+  auth:
+    user: smtp.user
+    pass: smtp.pass

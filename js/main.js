@@ -60,7 +60,8 @@
       $('#contact-form').on('submit', function(e) {
         e.preventDefault();
 
-        var $form = $(e.target)
+        var form = e.target;
+        var $form = $(form);
 
         // Use Ajax to submit form data
         $.ajax({
@@ -69,7 +70,7 @@
           data: $form.serialize(),
           success: function(result) {
             humane.log('Message sent successfully.', { addnCls: 'humane-bigbox-success' });
-            $form.reset();
+            form.reset();
           },
           error: function(res) {
 

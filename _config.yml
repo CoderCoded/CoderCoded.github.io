@@ -4,7 +4,7 @@ email: pekka@codercoded.com
 description: > # this means to ignore newlines until "baseurl:"
   We craft code.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://codercoded.github.io" # the base hostname & protocol for your site
+url: "https://www.codercoded.com" # the base hostname & protocol for your site
 twitter_username: codercoded
 github_username: CoderCoded
 vimeo_username: codercoded

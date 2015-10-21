@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/CoderCoded/codercoded.github.io#readme",
   "dependencies": {
+    "body-parser": "^1.14.1",
     "config": "^1.16.0",
     "express": "^4.13.3",
+    "joi": "^6.9.1",
     "js-yaml": "^3.4.3",
     "nodemailer": "^1.8.0",
     "nodemailer-smtp-transport": "^1.0.3"

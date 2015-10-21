@@ -20,7 +20,7 @@
 
 
 // Our variables
-// $base-font-family: Helvetica, Arial, sans-serif;
+$font-family-base: 'Roboto Condensed', sans-serif;
 // $base-font-size:   16px;
 // $small-font-size:  $base-font-size * 0.875;
 // $base-line-height: 1.5;
@@ -77,5 +77,6 @@ $border-radius-base: 3px;
   "base",
   "layout",
   "blog",
-  "syntax-highlighting"
+  "syntax-highlighting",
+  "humane"
 ;

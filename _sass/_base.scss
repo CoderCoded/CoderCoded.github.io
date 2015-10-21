@@ -45,7 +45,7 @@
 /* Basic */
 
 body, input, textarea, select {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: $font-family-base;
   line-height: 1.85em;
   color: $gray;
   font-weight: 400;

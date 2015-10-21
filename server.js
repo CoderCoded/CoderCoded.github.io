@@ -16,10 +16,21 @@ var contactSchema = Joi.object().keys({
   message: Joi.string().max(2000).required()
 })
 
+var smtpTrans = nodemailer.createTransport(smtpTransport(CONFIG.smtp))
+
 // Parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 
-var smtpTrans = nodemailer.createTransport(smtpTransport(CONFIG.smtp))
+// Add headers
+app.use(function (req, res, next) {
+
+  // Allow post from www.codercoded.com
+  res.setHeader('Access-Control-Allow-Origin', 'https://www.codercoded.com')
+  res.setHeader('Access-Control-Allow-Methods', 'POST')
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type')
+
+  next()
+})
 
 app.post('/', function (req, res) {
 

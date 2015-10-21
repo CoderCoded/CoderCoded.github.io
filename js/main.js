@@ -57,6 +57,32 @@
 
       });
 
+      $('#contact-form').on('submit', function(e) {
+        e.preventDefault();
+
+        var $form = $(e.target)
+
+        // Use Ajax to submit form data
+        $.ajax({
+          url: $form.attr('action'),
+          type: 'POST',
+          data: $form.serialize(),
+          success: function(result) {
+            humane.log('Message sent successfully.', { addnCls: 'humane-bigbox-success' });
+            $form.reset();
+          },
+          error: function(res) {
+
+            var err = 'Error sending form.'
+
+            if (res.status === 400 || res.status === 500) {
+              err = res.responseText
+            }
+
+            humane.log(err, { addnCls: 'humane-bigbox-error' });
+          }
+        });
+      })
 
   });
 

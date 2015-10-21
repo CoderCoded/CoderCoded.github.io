@@ -24,7 +24,7 @@ var smtpTrans = nodemailer.createTransport(smtpTransport(CONFIG.smtp))
 app.post('/', function (req, res) {
 
   log.info('Got POST:')
-  log.info(req.body)
+  log.info({body: req.body})
 
   Joi.validate(req.body, contactSchema, function (err, value) {
 
@@ -35,14 +35,14 @@ app.post('/', function (req, res) {
 
     // Mailer options
     var mailOpts = {
-      from: req.body.name + ' &lt;' + req.body.email + '&gt;',
+      from: req.body.name + ' <' + req.body.email + '>',
       to: CONFIG.to,
       subject: CONFIG.prefix + req.body.subject,
       text: req.body.message
     }
 
     log.info('Sending email:')
-    log.info(mailOpts)
+    log.info({options: mailOpts})
 
     smtpTrans.sendMail(mailOpts, function (error, response) {
       if (error) {

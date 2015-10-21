@@ -5,6 +5,9 @@ var smtpTransport = require('nodemailer-smtp-transport')
 var CONFIG = require('config')
 var bodyParser = require('body-parser')
 var Joi = require('joi')
+var bunyan = require('bunyan')
+var pkg = require('./package.json')
+var log = bunyan.createLogger({ name: pkg.name })
 
 var contactSchema = Joi.object().keys({
   name: Joi.string().alphanum().min(3).max(30).required(),
@@ -20,13 +23,13 @@ var smtpTrans = nodemailer.createTransport(smtpTransport(CONFIG.smtp))
 
 app.post('/', function (req, res) {
 
-  console.log('Got POST:')
-  console.log(JSON.stringify(req.body, null, 2))
+  log.info('Got POST:')
+  log.info(req.body)
 
   Joi.validate(req.body, contactSchema, function (err, value) {
 
     if (err) {
-      console.error(err)
+      log.error(err)
       res.status(500).send('Invalid form data.')
     }
 
@@ -38,12 +41,15 @@ app.post('/', function (req, res) {
       text: req.body.message
     }
 
+    log.info('Sending email:')
+    log.info(mailOpts)
+
     smtpTrans.sendMail(mailOpts, function (error, response) {
       if (error) {
-        console.error(error)
+        log.error(error)
         res.status(500).send('Failed to send the message.')
       } else {
-        console.log(response)
+        log.info(response)
         res.status(200).send('Message successfully sent!')
       }
     })
@@ -54,5 +60,5 @@ var server = app.listen(CONFIG.port, function () {
   var host = server.address().address
   var port = server.address().port
 
-  console.info('Mailer listening at http://%s:%s', host, port)
+  log.info('Mailer listening at http://%s:%s', host, port)
 })

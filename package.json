@@ -1,5 +1,5 @@
 {
-  "name": "codercoded.github.io",
+  "name": "crcd-contact-mailer",
   "version": "1.0.0",
   "description": "Contact backend for our site",
   "private": true,
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/CoderCoded/codercoded.github.io#readme",
   "dependencies": {
     "body-parser": "^1.14.1",
+    "bunyan": "^1.5.1",
     "config": "^1.16.0",
     "express": "^4.13.3",
     "joi": "^6.9.1",

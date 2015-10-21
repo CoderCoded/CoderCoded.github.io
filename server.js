@@ -40,10 +40,10 @@ app.post('/', function (req, res) {
 
     smtpTrans.sendMail(mailOpts, function (error, response) {
       if (error) {
-        console.error(err)
+        console.error(error)
         res.status(500).send('Failed to send the message.')
       } else {
-        console.log(err)
+        console.log(response)
         res.status(200).send('Message successfully sent!')
       }
     })

@@ -10,10 +10,10 @@ var pkg = require('./package.json')
 var log = bunyan.createLogger({ name: pkg.name })
 
 var contactSchema = Joi.object().keys({
-  name: Joi.string().alphanum().min(3).max(30).required(),
+  name: Joi.string().min(3).max(30).required(),
   email: Joi.string().email(),
-  subject: Joi.string().alphanum().max(70),
-  message: Joi.string().alphanum().max(2000).required()
+  subject: Joi.string().max(70),
+  message: Joi.string().max(2000).required()
 })
 
 // Parse application/x-www-form-urlencoded
@@ -31,6 +31,7 @@ app.post('/', function (req, res) {
     if (err) {
       log.error(err)
       res.status(400).send('Invalid form data.')
+      return
     }
 
     // Mailer options

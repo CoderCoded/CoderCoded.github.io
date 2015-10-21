@@ -5,10 +5,12 @@
 
   <body>
 
-    <script>
-      if (window.location.host != "www.codercoded.com") { window.location.host = "codercoded.com" }
-      if (window.location.protocol != "https:") { window.location.protocol = "https:" }
-    </script>
+    {% if site.production %}
+      <script>
+        if (window.location.host != "www.codercoded.com") { window.location.host = "codercoded.com" }
+        if (window.location.protocol != "https:") { window.location.protocol = "https:" }
+      </script>
+    {% endif %}
 
     {% include nav.html %}
 

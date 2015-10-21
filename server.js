@@ -30,19 +30,28 @@ app.post('/', function (req, res) {
 
     if (err) {
       log.error(err)
-      res.status(500).send('Invalid form data.')
+      res.status(400).send('Invalid form data.')
     }
 
     // Mailer options
     var mailOpts = {
-      from: req.body.name + ' <' + req.body.email + '>',
+      from: CONFIG.from,
       to: CONFIG.to,
-      subject: CONFIG.prefix + req.body.subject,
-      text: req.body.message
+      subject: CONFIG.prefix + req.body.subject
+    }
+
+    if (req.body.email) {
+      mailOpts.replyTo = {
+        name: req.body.name,
+        address: req.body.email
+      }
+      mailOpts.text = req.body.message
+    } else {
+      mailOpts.text = req.body.name + ' sent a message:\n\n' + req.body.message
     }
 
     log.info('Sending email:')
-    log.info({options: mailOpts})
+    log.info({ options: mailOpts })
 
     smtpTrans.sendMail(mailOpts, function (error, response) {
       if (error) {

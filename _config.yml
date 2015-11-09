@@ -12,7 +12,39 @@ vimeo_username: codercoded
 # Build settings
 markdown: kramdown
 
+gems: [jekyll/responsive_image]
+
+responsive_image:
+  # [Required]
+  # Path to the image template.
+  template: _includes/blog-image-medium.html
+
+
+  # [Optional, Default: []]
+  # An array of resize configuration objects. Each object must contain at least
+  # a `width` value.
+
+  # Use always 3 sizes, since we use static indexes
+  sizes:
+    - width: 480  # [Required] How wide the resized image will be.
+    - width: 800
+    - width: 1400
+
+  # [Optional, Default: assets/resized/%{filename}-%{width}x%{height}.%{extension}]
+  # The template used when generating filenames for resized images. Must be a
+  # relative path.
+  #
+  # Parameters available are:
+  #   %{basename}    Basename of the file (assets/some-file.jpg => some-file.jpg)
+  #   %{filename}    Basename without the extension (assets/some-file.jpg => some-file)
+  #   %{extension}   Extension of the file (assets/some-file.jpg => jpg)
+  #   %{width}       Width of the resized image
+  #   %{height}      Height of the resized image
+  #
+  output_path_format: images/resized/%{width}/%{basename}
+
+
 # Serve settings
 host: 0.0.0.0
 
-production: true
+production: false

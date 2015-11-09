@@ -7,7 +7,45 @@
 
     {% include nav_blog.html %}
 
-    {{ content }}
+
+    <div class="wrapper">
+      <article class="blog container">
+        <div class="row">
+          <div class="8u 12u$(mobile)">
+
+            {{ content }}
+
+          </div>
+
+          <div class="4u 12u$(mobile)">
+            <div id="sidebar">
+
+              <!-- Sidebar -->
+                <section>
+                  <h3>Coder Coded Blog</h3>
+                  <p>This blog is for posting news about our work and stuff we encounter during hacking.</p>
+                  <footer>
+                    <a href="/#work" class="button">Check out what we do</a>
+                  </footer>
+                </section>
+
+                <section>
+                  <h3>Latest posts</h3>
+                  <ul class="style2">
+                    {% for post in site.posts limit:10 %}  
+                       <li>
+                         <span>{{ post.date | date: "%b %d, %Y" }}</span> &raquo; <a href="{{ post.url }}"> {{ post.title }}</a>  
+                       </li>
+                    {% endfor %}
+                  </ul>
+                </section>
+
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
 
     {% include footer.html %}
 

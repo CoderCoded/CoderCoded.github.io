@@ -9,13 +9,22 @@
     position: relative;
   }
 
+  .title {
+    font-weight: bold;
+  }
+
   .box {
     display: block;
     text-align: left;
     @media screen and (max-width: 1600px) {
       padding-top: 3.5em;
     }
+  }
 
+  .image {
+    @media screen and (max-width: 1600px) {
+      margin-top: -1.5em;
+    }
   }
 
   .date {
@@ -23,6 +32,7 @@
     color: $gray-lightest;
     background-color: $gray-darkest;
     position: absolute;
+    z-index: 100;
     top: 16px;
     left: -140px;
     width: 154px;
@@ -31,8 +41,8 @@
 
     @media screen and (max-width: 1600px) {
       left: auto;
-      top: 4px;
-      right: 4px;
+      top: 1em;
+      right: 1em;
       text-align: right;
 
     }
@@ -40,6 +50,22 @@
   }
 
 }
+
+.image {
+  margin-bottom: 32px;
+
+  img {
+    border: 1px solid $gray-lightest;
+  }
+
+  .caption {    
+    padding: 4px;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+}
+
 
 .blog-nav {
   .logo img {
@@ -72,6 +98,10 @@
 
 @include breakpoint(mobile) {
 
+  .box {
+    padding: 12px;
+  }
+
   .blog-nav {
     .logo img {
       display: none;
@@ -81,7 +111,13 @@
   .blog {
     .date {
       width: 120px;
+      top: 0.5em;
+      right: 0.5em;
     }
+  }
+
+  .image {
+    margin-top: -2.5em;
   }
 
 }

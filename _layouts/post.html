@@ -1,15 +1,33 @@
 ---
-layout: base
+layout: blog
 ---
-<div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
+<div class="post-content">
 
-  <article class="post-content">
+  <div class="date">{{ page.date | date: "%b %d, %Y" }}</div>
+
+  <article class="box">
+
+    {% assign path = images/{{ page.image }} %}
+
+    {% if page.image %}
+      {% responsive_image_block %}
+        path: images/{{ page.image }}
+        alt: {{ page.image_alt }}
+        title: {{ page.image_alt }}
+      {% endresponsive_image_block %}
+    {% endif %}
+
+    <h2 class="title">{{ page.title }}</h2>
+
+    {% if page.subtitle %}
+      <h3>{{ page.subtitle }}</h3>
+    {% endif %}
+
     {{ content }}
+
+    <!-- <a href="{{ page.url }}">Read more</a>  -->
+
   </article>
 
 </div>

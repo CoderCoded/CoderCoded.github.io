@@ -8,6 +8,31 @@
     box-shadow: none;
   }
 
+  &.news {
+
+    text-align: left;
+
+    padding: 2em 0 2em 0;
+
+    h1, h2 {
+      font-weight: bold;
+      line-height: 1em;
+      margin-bottom: 0.3em;
+    }
+
+    header {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .news-image {
+      width: 256px;
+      float: right;
+      border: 1px solid $gray-lighter;
+    }
+  }
+
   &.style1 {
     background-color: #303030;
     background-image: url('/images/bg.jpg');
@@ -599,6 +624,10 @@
     &.first {
       padding-top: 5em;
     }
+  }
+
+  #news {
+    padding: 2em;
   }
 
   /* Nav */

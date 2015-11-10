@@ -6,33 +6,81 @@
 </description>
     <link>https://www.codercoded.com/</link>
     <atom:link href="https://www.codercoded.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 09 Nov 2015 19:21:09 +0200</pubDate>
-    <lastBuildDate>Mon, 09 Nov 2015 19:21:09 +0200</lastBuildDate>
+    <pubDate>Tue, 10 Nov 2015 11:46:51 +0200</pubDate>
+    <lastBuildDate>Tue, 10 Nov 2015 11:46:51 +0200</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Our winning hack - Fear of Flying</title>
-        <description>&lt;p&gt;30% of people are anxious about flying (at least in some point of their lives). About 6% do not fly at all. &lt;em&gt;Fear of flying&lt;/em&gt; or &lt;em&gt;aviophobia&lt;/em&gt; is a problem that is recognized, but currently only a handful of innovations exist to cope with it. Some airlines provide hands-on courses a couple of times in a year to cope with aviophobia. These courses cost money, but are highly popular. We realized that there is practically zero content available for aviophobic people during flights.&lt;/p&gt;
+        <description>&lt;p&gt;&lt;a href=&quot;http://hackjunction.com/&quot;&gt;Junction&lt;/a&gt; was one of the &lt;a href=&quot;www.slush.org/hacks/&quot;&gt;Slush
+hacks&lt;/a&gt;, held on November 6.-8. 2015 at Kattilahalli,
+Suvilahti in Helsinki. This hackathon had nine tracks to choose from. When the
+tracks were announced, we thought we might have a good idea for &lt;a href=&quot;http://futureoftravel.co/&quot;&gt;.AERO
+track&lt;/a&gt; by Finnair, Reaktor and Finavia. After
+signin up we didn’t plan it any further, just kept in mind that it could be
+something associated with fear of flying since there was almost nothing to
+help that in-flight available. Then we refined our idea during the hackathon.&lt;/p&gt;
 
-&lt;h3 id=&quot;what-it-does&quot;&gt;What it does&lt;/h3&gt;
-&lt;p&gt;New airplanes have a web server and a wi-fi access point for passengers. We designed a set of apps that utilize an accelerometer attached to the web server and the in-flight portal that provides the landing page for passengers using the airplane wi-fi. We have produced 4 different apps to give you an idea.&lt;/p&gt;
+&lt;h3 id=&quot;why-this-topic&quot;&gt;Why this topic?&lt;/h3&gt;
 
-&lt;h3 id=&quot;turbulence-meter&quot;&gt;Turbulence meter&lt;/h3&gt;
+&lt;p&gt;30% of people are anxious about flying (at least in some point of their
+lives). About 6% do not fly at all. &lt;em&gt;Fear of flying&lt;/em&gt; or &lt;em&gt;aviophobia&lt;/em&gt; is a
+problem that is recognized, but currently only a handful of innovations exist
+to cope with it. Some airlines provide hands-on courses a couple of times in a
+year to cope with aviophobia. These courses cost money, but are highly
+popular. We realized that there is practically zero content available for
+aviophobic people during flights.&lt;/p&gt;
 
-&lt;p&gt;Airplanes can take much more than what people experience during turbulence. This meter displays the “safe zone” for airplane and plots the currently experienced g-forces. Demo online &lt;a href=&quot;http://aero.codercoded.com/turbulence/&quot;&gt;here&lt;/a&gt;, &lt;em&gt;emulate accelerometer from devtools, or view with mobile device.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&quot;how-we-planned-to-implement-it&quot;&gt;How we planned to implement it?&lt;/h3&gt;
 
-&lt;h3 id=&quot;mood-meter&quot;&gt;Mood meter&lt;/h3&gt;
+&lt;p&gt;New airplanes have a web server and a wi-fi access point for passengers. We
+designed a set of apps that utilize an accelerometer attached to the web
+server and the in-flight portal that provides the landing page for passengers
+using the airplane wi-fi. We have produced 4 different apps to give you an
+idea. Check out the &lt;a href=&quot;http://aero.codercoded.com&quot;&gt;slideshow online&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Passengers can now communicate their level of anxiety to the cabin crew by using the passenger mood-meter. It is embarrassing to talk directly to flight attendants about your fears when other people are listening. The mood-meter is a very subtle way to inform cabin crew about the level of anxiety of the passenger, and also the reason - another passenger makes you feel uncomfortable, or you’re afraid of current flight conditions. Check out the &lt;a href=&quot;http://aero.codercoded.com/seatmap/&quot;&gt;cabin crew view&lt;/a&gt; or &lt;a href=&quot;http://aero.codercoded.com/slider/&quot;&gt;passenger app&lt;/a&gt; demos online.&lt;/p&gt;
+&lt;h4 id=&quot;turbulence-meter&quot;&gt;Turbulence meter&lt;/h4&gt;
 
-&lt;p&gt;Cabin crew view shows a “seatmap heatmap” of passenger anxiety levels, making it possible for cabin crew to react in situations during flight.&lt;/p&gt;
+&lt;p&gt;Airplanes can take much more than what people experience during turbulence.
+This meter displays the “safe zone” for airplane and plots the currently
+experienced g-forces. Demo online
+&lt;a href=&quot;http://aero.codercoded.com/turbulence/&quot;&gt;here&lt;/a&gt;, &lt;em&gt;emulate accelerometer from
+devtools, or view with mobile device.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;airplane-soundtrack&quot;&gt;Airplane soundtrack&lt;/h3&gt;
-&lt;p&gt;A lot of people think that the airplane makes sounds that are not normal. This app plays the passenger all the normal sounds that airplane makes during flights. This way they can reassure themselves that the sounds they’re hearing are perfectly normal&lt;/p&gt;
+&lt;h4 id=&quot;mood-meter&quot;&gt;Mood meter&lt;/h4&gt;
 
-&lt;h3 id=&quot;fun-in-the-turbulence&quot;&gt;Fun in the turbulence&lt;/h3&gt;
+&lt;p&gt;Passengers can now communicate their level of anxiety to the cabin crew by
+using the passenger mood-meter. It is embarrassing to talk directly to flight
+attendants about your fears when other people are listening. The mood-meter is
+a very subtle way to inform cabin crew about the level of anxiety of the
+passenger, and also the reason - another passenger makes you feel
+uncomfortable, or you’re afraid of current flight conditions. Check out the
+&lt;a href=&quot;http://aero.codercoded.com/seatmap/&quot;&gt;cabin crew view&lt;/a&gt; or &lt;a href=&quot;http://aero.codercoded.com/slider/&quot;&gt;passenger
+app&lt;/a&gt; demos online.&lt;/p&gt;
 
-&lt;p&gt;We think that turbulence should be &lt;em&gt;anticipated&lt;/em&gt; by the passengers. It is our job to come up with ideas that get into life only during turbulence. There could be games or similar that provide rewards during it, or something like we envisioned with wobbly faces / things. Couple of demos: &lt;a href=&quot;http://aero.codercoded.com/fun/&quot;&gt;Kekkonen&lt;/a&gt; and an &lt;a href=&quot;http://aero.codercoded.com/boobs/&quot;&gt;NSFW&lt;/a&gt; version.&lt;/p&gt;
+&lt;p&gt;Cabin crew view shows a “seatmap heatmap” of passenger anxiety levels, making
+it possible for cabin crew to react in situations during flight.&lt;/p&gt;
+
+&lt;h4 id=&quot;airplane-soundtrack&quot;&gt;Airplane soundtrack&lt;/h4&gt;
+
+&lt;p&gt;A lot of people think that the airplane makes sounds
+that are not normal. This app plays the passenger all the normal sounds that
+airplane makes during flights. This way they can reassure themselves that the
+sounds they’re hearing are perfectly normal&lt;/p&gt;
+
+&lt;h4 id=&quot;fun-in-the-turbulence&quot;&gt;Fun in the turbulence&lt;/h4&gt;
+
+&lt;p&gt;We think that turbulence should be &lt;em&gt;anticipated&lt;/em&gt; by the passengers. It is our
+job to come up with ideas that get into life only during turbulence. There
+could be games or similar that provide rewards during it, or something like we
+envisioned with wobbly faces / things. Couple of demos:
+&lt;a href=&quot;http://aero.codercoded.com/fun/&quot;&gt;Kekkonen&lt;/a&gt; and an
+&lt;a href=&quot;http://aero.codercoded.com/boobs/&quot;&gt;NSFW&lt;/a&gt; version.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-next&quot;&gt;What next?&lt;/h3&gt;
+
+&lt;p&gt;The winning hacks have a chance to pitch the ideas at Slush, so we’ll see you
+there!&lt;/p&gt;
 </description>
         <pubDate>Mon, 09 Nov 2015 13:48:00 +0200</pubDate>
         <link>https://www.codercoded.com/blog/2015/11/09/fear-of-flying.html</link>

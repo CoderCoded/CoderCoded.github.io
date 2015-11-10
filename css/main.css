@@ -1395,6 +1395,8 @@ ol.default {
       font-weight: bold;
       line-height: 1em;
       margin-bottom: 0.3em; }
+    .wrapper.news h3 {
+      margin: 0; }
     .wrapper.news header {
       width: 100%;
       margin: 0;
@@ -1521,6 +1523,10 @@ ol.default {
 
   h3 {
     font-size: 1.8em;
+    letter-spacing: -0.015em; }
+
+  h4 {
+    font-size: 1.5em;
     letter-spacing: -0.015em; }
 
   h1, h2, h3, h4, h5, h6 {

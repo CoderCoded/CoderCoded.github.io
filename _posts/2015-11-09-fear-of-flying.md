@@ -4,6 +4,8 @@ title:  "Our winning hack - Fear of Flying"
 subtitle: "Junction 2015 hackathon winner of .AERO track"
 date:   2015-11-09 11:48:00
 categories: blog
+vimeo_id: 145214906
+vimeo_url: https://vimeo.com/145214906
 image: fear-of-flying.jpg
 image_alt: "Fear of Flying - Apps and ideas to beat aviophobia."
 ---

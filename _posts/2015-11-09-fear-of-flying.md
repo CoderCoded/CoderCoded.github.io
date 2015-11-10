@@ -14,8 +14,7 @@ Suvilahti in Helsinki. This hackathon had nine tracks to choose from. When the
 tracks were announced, we thought we might have a good idea for [.AERO
 track](http://futureoftravel.co/) by Finnair, Reaktor and Finavia. After
 signin up we didn't plan it any further, just kept in mind that it could be
-something associated with fear of flying since there was almost nothing to
-help that in-flight available. Then we refined our idea during the hackathon.
+something associated with fear of flying. Then we refined our idea during the hackathon.
 
 ### Why this topic?
 

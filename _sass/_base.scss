@@ -501,14 +501,18 @@ ol.default {
 
   &:before {
     display: inline-block;
-    font-family: FontAwesome;
-    font-size: 1.25em;
+    // font-family: FontAwesome;
+    font-size: 2.0em;
     text-decoration: none;
     font-style: normal;
     font-weight: normal;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  &.fa:before {
+    font-family: FontAwesome;
   }
 
   > .label {
@@ -522,7 +526,7 @@ ol.default {
     cursor: default;
 
     &:before {
-      font-size: 6em;
+      font-size: 8em;
     }
   }
 }

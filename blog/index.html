@@ -63,6 +63,57 @@
             
   <div class="post-content">
 
+    <div class="date">Oct 04, 2016</div>
+
+    <article class="box">
+
+      
+
+      
+
+        <a href="https://vimeo.com/185363113" class="image aspect-ratio"><iframe src="//player.vimeo.com/video/185363113?title=0&amp;byline=0&amp;portrait=0&amp;color=18a721" width="800" height="450" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></a>
+
+
+      
+
+      <h2 class="title"><a href="/blog/2016/10/04/pepper-animator.html">Improving the workflow for Pepper animations</a></h2>
+
+      
+        <h3>A Unity application for controlling robot motion</h3>
+      
+
+
+      <p>We had our first encounter with Pepper at <a href="https://blog.hackjunction.com/hacking-robots-in-japan-a86bc227bfd4">Junction Asia</a> in Tokyo. During the Junction Asia hackathon, we came up with some cool animation ideas for the robot. However, we realized that the default tools used to create animations for Pepper were a bit cumbersome, and there would not be enough time to come up with anything useful at the hackathon. After the hackathon we joined the Pepper developer program and since then we have learned a lot about Pepper and its tools. In this blog entry we talk about our solution to improve Pepper’s animation features.</p>
+
+<h3 id="how-animations-are-created-for-pepper">How animations are created for Pepper</h3>
+
+<p>Choregraphe (The Pepper’s development environment) has a timeline-based interface with keyframes and curves, similar to common animation programs. However, setting the robot’s pose for each keyframe is a slow process. When using a virtual robot, only forward kinematics (FK) are available. Setting values for each of the robot’s joints with a mouse is not very practical. A physical robot allows the user to manipulate the robot’s joints directly by twisting its arms, for example, but coming up with rich and realistic animations with this method is still very time consuming.</p>
+
+<h3 id="a-human-actor-to-speed-up-the-process">A human actor to speed-up the process</h3>
+
+<p>Professional animation workflows include, for example, motion capturing and blending together pre-recorded animations. Since we had some experience (Juha especially) with Kinect, we had an idea: could we use Kinect to track a human actor and convert the poses for Pepper?</p>
+
+<p>Soon we found out that a guy named <a href="https://github.com/malaybaku/">Atsushi Sugiyama</a> from Japan had already done <a href="http://www.baku-dreameater.net/archives/3951">an implementation for Kinect v2</a>. As we had a couple of older Kinects (v1) lying around, we tried to use those first with <a href="https://unity3d.com/">Unity</a>, which has assets for real-time motion capture using Kinect. Later on we upgraded to Kinect v2 as v1 has inferior skeletal tracking and noisier output when compared to v2.</p>
+
+<p>The problem with Kinect is the inaccurate tracking of hands and the head. Especially with Pepper, it is very important to track those parts accurately. A motion capture software for Kinect (and for many other devices, too) called <a href="http://ipisoft.com/">iPi Soft</a> supports PSMove controllers to improve head and hand tracking. This is a very inexpensive solution and fits perfectly to this case. <a href="https://github.com/HipsterSloth/psmove-unity5">Here</a> is a neat example (made by <a href="https://github.com/HipsterSloth">HipsterSloth</a>) of using <a href="http://thp.io/2010/psmove/">PS Move API</a> in Unity. The PS Move API removes the need for a PS console.</p>
+
+<h3 id="our-solution">Our solution</h3>
+
+<p>We use Kinect v2 to generate a digital skeleton of a human actor. The skeletal data is sent to Unity and used as the skeleton for a humanlike virtual character, roughly the size of Pepper.</p>
+
+<p>We also have a separate virtual model of Pepper. It has all the joints that Pepper has (as they are with their limitations) but not a skeletal humanlike structure. The Pepper model tries to mimic the poses of the virtual character using Inverse Kinematics (IK). This model’s joint data is then sent to NaoQI (robot’s OS) using UDP.</p>
+
+<p>Choregraphe has tools for recording the motion of the robot (a physical or a virtual one). The recording can then be used as a base for the animation. As can be seen in the video, the system is quite useful already. We use it whenever we need to create custom animations for the robot.</p>
+
+
+      <!-- <a href="/blog/2016/10/04/pepper-animator.html">Read more</a>  -->
+
+    </article>
+
+  </div>
+
+  <div class="post-content">
+
     <div class="date">Aug 03, 2016</div>
 
     <article class="box">
@@ -232,6 +283,10 @@ there!</p>
                 <section>
                   <h3>Latest posts</h3>
                   <ul class="style2">
+                      
+                       <li>
+                         <span>Oct 04, 2016</span> &raquo; <a href="/blog/2016/10/04/pepper-animator.html"> Improving the workflow for Pepper animations</a>  
+                       </li>
                       
                        <li>
                          <span>Aug 03, 2016</span> &raquo; <a href="/blog/2016/08/03/pepper-developer-partner.html"> Need an app for Pepper robot?</a>  

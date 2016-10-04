@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Improving the workflow for Pepper animations"
+title:  "Pepper animation workflow improvement"
 subtitle: "A Unity application for controlling robot motion"
 date: 2016-10-04 18:00:00
 categories: blog

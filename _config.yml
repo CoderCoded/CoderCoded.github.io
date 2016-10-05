@@ -12,7 +12,9 @@ vimeo_username: codercoded
 # Build settings
 markdown: kramdown
 
-gems: [jekyll/responsive_image]
+gems:
+  - jekyll/responsive_image
+  - jekyll-seo-tag
 
 responsive_image:
   # [Required]

@@ -17,6 +17,7 @@ layout: blog
 
     {% elsif page.image %}
       {% responsive_image_block %}
+        template: _includes/blog-image-medium.html
         path: images/{{ page.image }}
         alt: {{ page.image_alt }}
         title: {{ page.image_alt }}

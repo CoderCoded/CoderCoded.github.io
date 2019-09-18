@@ -33,14 +33,30 @@
 
     .news-text {
       float: left;
+
+      @include breakpoint(mobile) {
+        float: none;
+      }
     }
 
     .news-image {
       float: right;
 
+      @include breakpoint(mobile) {
+        float: none;
+        margin: auto;
+        width: 300px;
+      }
+
+      a {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+      }
+
       img {
-        max-height: 198px;
-        height: 100%;
+        width: 300px;
+        height: auto;
         border: 1px solid $gray-lighter;
       }
     }

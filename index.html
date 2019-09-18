@@ -27,9 +27,9 @@ layout: base
     <div class="row">
       <div class="12u 12u(mobile)">
         <header>
-          <div class="news-image not-mobile">
+          <div class="news-image">
               <a href ="/blog/2016/08/03/pepper-developer-partner.html">
-                <img src="/images/resized/480/crcd_pepper_5.jpg" alt="Pepper">
+                {% responsive_image path: images/crcd_pepper_5.jpg alt: "Pepper" template: _includes/responsive-image.html %}
               </a>
           </div>
           <div class="news-text">

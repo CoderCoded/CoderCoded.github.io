@@ -34,15 +34,13 @@ New airplanes have a web server and a wi-fi access point for passengers. We
 designed a set of apps that utilize an accelerometer attached to the web
 server and the in-flight portal that provides the landing page for passengers
 using the airplane wi-fi. We have produced 4 different apps to give you an
-idea. Check out the [slideshow online](http://aero.codercoded.com).
+idea. 
 
 #### Turbulence meter
 
 Airplanes can take much more than what people experience during turbulence.
 This meter displays the "safe zone" for airplane and plots the currently
-experienced g-forces. Demo online
-[here](http://aero.codercoded.com/turbulence/), *emulate accelerometer from
-devtools, or view with mobile device.*
+experienced g-forces.
 
 #### Mood meter
 
@@ -51,9 +49,7 @@ using the passenger mood-meter. It is embarrassing to talk directly to flight
 attendants about your fears when other people are listening. The mood-meter is
 a very subtle way to inform cabin crew about the level of anxiety of the
 passenger, and also the reason - another passenger makes you feel
-uncomfortable, or you're afraid of current flight conditions. Check out the
-[cabin crew view](http://aero.codercoded.com/seatmap/) or [passenger
-app](http://aero.codercoded.com/slider/) demos online.
+uncomfortable, or you're afraid of current flight conditions.
 
 Cabin crew view shows a "seatmap heatmap" of passenger anxiety levels, making
 it possible for cabin crew to react in situations during flight.
@@ -70,9 +66,7 @@ sounds they're hearing are perfectly normal
 We think that turbulence should be _anticipated_ by the passengers. It is our
 job to come up with ideas that get into life only during turbulence. There
 could be games or similar that provide rewards during it, or something like we
-envisioned with wobbly faces / things. Couple of demos:
-[Kekkonen](http://aero.codercoded.com/fun/) and an
-[NSFW](http://aero.codercoded.com/boobs/) version.
+envisioned with wobbly faces / things.
 
 ### What next?
 

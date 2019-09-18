@@ -2,7 +2,7 @@
 title: Coder Coded
 email: pekka@codercoded.com
 description: > # this means to ignore newlines until "baseurl:"
-  We craft code.
+  Pepper the robot application development and interactive installations.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://www.codercoded.com" # the base hostname & protocol for your site
 twitter_username: codercoded
@@ -59,4 +59,3 @@ exclude:
   - server.js
   - yarn.lock
   - yarn-error.log
-  - CNAME

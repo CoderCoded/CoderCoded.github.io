@@ -45,7 +45,7 @@ $button-bg:           $brand-color;
 $button-hover-bg:     lighten($button-bg, 8%);
 $button-active-bg:    lighten($button-bg, 3%);
 
-$gray:                #888888;
+$gray:                #454545;
 $gray-lightest:       lighten($gray, 41%);
 $gray-lighter:        lighten($gray, 28%);
 $gray-light:          lighten($gray, 15%);
@@ -57,27 +57,10 @@ $gray-darkest:        darken($gray, 41%);
 $border-radius-base: 3px;
 
 
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-// @mixin media-query($device) {
-//   @media screen and (max-width: $device) {
-//     @content;
-//   }
-// }
-
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import
-  "base",
-  "layout",
-  "blog",
-  "syntax-highlighting",
-  "crcd-icons",
-  "humane"
-;
+@import 'base';
+@import 'blog';
+@import 'crcd-icons';
+@import 'humane';
+@import 'layout';
+@import 'syntax-highlighting';

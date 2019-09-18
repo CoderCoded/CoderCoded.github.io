@@ -11,6 +11,7 @@
 
   .title {
     font-weight: bold;
+    line-height: 1.25em;
   }
 
   .box {
@@ -68,11 +69,22 @@
 
 
 .blog-nav {
-  .logo img {
-    height: 42px;
+  .logo {
     position: absolute;
     left: 8px;
     top: 8px;
+
+    & > a {
+      margin: 0 !important;
+      padding: 0 !important;
+      &:hover {
+        background: inherit !important;
+      }
+    }
+
+    img {
+      height: 42px;
+    }
   }
 }
 

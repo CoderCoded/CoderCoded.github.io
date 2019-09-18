@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "*.ts": "xml"
+    },
+    "typescript.validate.enable": false,
+    "javascript.validate.enable": false,
+
+    "eslint.validate": [
+        "javascript"
+    ],
+    "eslint.packageManager": "yarn",
+    "editor.tabSize": 2
+}

@@ -2,7 +2,7 @@
 @import 'libs/functions';
 @import 'libs/mixins';
 @import 'libs/vertical-rhythm';
-@charset "UTF-8";
+// @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400,400italic,700');
 @import url('font-awesome.min.css');
 
@@ -58,7 +58,7 @@ body, input, textarea, select {
 
 a {
   @include vendor('transition', 'color .2s ease-in-out');
-  color: $gray-darker;
+  color: $brand-color;
   text-decoration: none;
   // font-weight: bold;
 
@@ -146,8 +146,11 @@ p, ul, ol, dl, table {
 /* Form */
 
 form {
+  width: 80%;
+  margin: auto;
+
   label {
-    color: #3e3e3e;
+    color: #454545;
     font-weight: 700;
     display: block;
     margin: 0 0 0.5em 0;
@@ -161,44 +164,44 @@ form {
     @include vendor('transition', ('background .2s ease-in-out', 'box-shadow .2s ease-in-out'));
     -webkit-appearance: none;
     display: block;
-    border: 0;
-    padding: 0.75em;
+    height: 38px;
+    padding: 6px 10px;
     font-size: 1em;
+    line-height: 1.4em;
     border-radius: $border-radius-base;
-    border: solid 1px #ddd;
+    border: solid 1px #d1d1d1;
     background: #fff;
-    color: #bbb;
-    box-shadow: inset 0px 2px 3px 1px rgba(0, 0, 0, 0.05), 0px 1px 0px 0px rgba(255, 255, 255, 0.025);
+    color: #454545;
     width: 100%;
 
     &:focus {
-      background: #fafafa;
-      box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.05), 0px 1px 0px 0px rgba(255, 255, 255, 0.025), inset 0px 0px 2px 1px #43bff0;
+      border: 1px solid #33C3F0;
+      outline: 0;
     }
   }
 
   textarea {
-    height: 15em;
+    min-height: 8em;
   }
 
   .formerize-placeholder {
-    color: #555 !important;
+    color: #888 !important;
   }
 
   ::-webkit-input-placeholder {
-    color: #555 !important;
+    color: #888 !important;
   }
 
   :-moz-placeholder {
-    color: #555 !important;
+    color: #888 !important;
   }
 
   ::-moz-placeholder {
-    color: #555 !important;
+    color: #888 !important;
   }
 
   :-ms-input-placeholder {
-    color: #555 !important;
+    color: #888 !important;
   }
 
   ::-moz-focus-inner {
@@ -298,8 +301,6 @@ input[type="submit"],
 input[type="reset"],
 button,
 .button {
-  @include vendor('background-image', ('url("images/bg.png")', 'linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1))'));
-  @include vendor('transition', 'background-color .2s ease-in-out');
   -webkit-appearance: none;
   position: relative;
   display: inline-block;
@@ -316,7 +317,7 @@ button,
   //box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.75);
   background-color: $button-bg;
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: $button-hover-bg;
     color: #fff !important;
   }
@@ -338,6 +339,11 @@ button,
     &:active {
       background-color: #3f3f3f;
     }
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: default;
   }
 }
 
@@ -368,17 +374,18 @@ ul {
         display: block;
         width: 48px;
         height: 48px;
-        border-radius: $border-radius-base;
+        border-radius: 10px;
         top: 0;
         position: relative;
+        background-color: #444 !important;
 
         &:before {
           @include vendor('background-image', ('url("images/bg.png")', 'linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1))'));
           @include vendor('transition', 'background-color .2s ease-in-out');
           background-color: #444;
-          border-radius: $border-radius-base;
+          border-radius: 8px;
           // box-shadow: inset 0px 0px 0px 1px #282828, inset 0px 2px 1px 0px rgba(255, 255, 255, 0.1);
-          color: #2E2E2E !important;
+          // color: #2E2E2E !important;
           display: block;
           font-size: 26px;
           height: 48px;
@@ -459,6 +466,7 @@ ul {
 
           &:before {
             background-color: transparent;
+            color: #CFCFCF !important;
           }
         }
       }
@@ -473,6 +481,11 @@ ul {
       &:first-child {
         margin-left: 0;
       }
+    }
+
+    input[type="submit"] {
+      border-radius: 32px;
+      padding: 0.4em 2em;
     }
   }
 }
@@ -492,6 +505,34 @@ ol.default {
   background: #fff;
   box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
   text-align: center;
+}
+
+.box-featured {
+  min-height: 422px;
+}
+
+.box-sample {
+  min-height: 458px;
+}
+
+@include breakpoint(tablet) {
+  .box-featured {
+    min-height: 384px;
+  }
+
+  .box-sample {
+    min-height: 402px;
+  }
+}
+
+@include breakpoint(mobile) {
+  .box-featured {
+    min-height: 50px;
+  }
+
+  .box-sample {
+    min-height: 50px;
+  }
 }
 
 /* Icons */

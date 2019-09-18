@@ -10,11 +10,11 @@ title: Coder Coded Blog
 
     <article class="box">
 
-      {% assign path = images/{{ post.image }} %}
-
       {% if post.vimeo_id %}
 
-        <a href="{{ post.vimeo_url }}" class="image aspect-ratio"><iframe src="//player.vimeo.com/video/{{post.vimeo_id}}?title=0&amp;byline=0&amp;portrait=0&amp;color=18a721" width="800" height="450" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></a>
+        <a href="{{ post.vimeo_url }}" class="image aspect-ratio">
+          <iframe src="//player.vimeo.com/video/{{post.vimeo_id}}?title=0&amp;byline=0&amp;portrait=0&amp;color=18a721" width="800" height="450" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+        </a>
 
 
       {% elsif post.image %}

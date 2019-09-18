@@ -26,5 +26,13 @@
     "js-yaml": "^3.4.3",
     "nodemailer": "^1.8.0",
     "nodemailer-smtp-transport": "^1.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^6.4.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
   }
 }

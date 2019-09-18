@@ -8,11 +8,11 @@ layout: blog
 
   <article class="box">
 
-    {% assign path = images/{{ page.image }} %}
-
     {% if page.vimeo_id %}
 
-      <a href="{{ page.vimeo_url }}" class="image aspect-ratio"><iframe src="//player.vimeo.com/video/{{page.vimeo_id}}?title=0&amp;byline=0&amp;portrait=0&amp;color=18a721" width="800" height="450" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></a>
+      <a href="{{ page.vimeo_url }}" class="image aspect-ratio">
+        <iframe src="//player.vimeo.com/video/{{page.vimeo_id}}?title=0&amp;byline=0&amp;portrait=0&amp;color=18a721" width="800" height="450" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+      </a>
 
 
     {% elsif page.image %}

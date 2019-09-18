@@ -19,7 +19,7 @@ plugins:
 responsive_image:
   # [Required]
   # Path to the image template.
-  template: _includes/blog-image-medium.html
+  template: _includes/responsive-image.html
 
 
   # [Optional, Default: []]
@@ -49,4 +49,14 @@ responsive_image:
 # Serve settings
 host: 0.0.0.0
 
-production: false
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - package.json
+  - node_modules
+  - server.js
+  - yarn.lock
+  - yarn-error.log
+  - CNAME

@@ -2,10 +2,10 @@
 	{% assign url = page.url | remove:'index.html' %}
 	<ul style="position: fixed; right: 20px;">
 			<li>
-				<a href="{{ '/fi/' | prepend: site.baseurl }}"{% if url == '/fi/' %}class="nav-active"{% endif %}>fi</a>
+				<a href="{{ '/' | prepend: site.baseurl }}"{% if url == '/' %}class="nav-active"{% endif %}>fi</a>
 			</li>
 			<li>
-					<a href="{{ '/' | prepend: site.baseurl }}"{% if url == '/' %}class="nav-active"{% endif %}>en</a>
+					<a href="{{ '/en/' | prepend: site.baseurl }}"{% if url == '/en/' %}class="nav-active"{% endif %}>en</a>
 			</li>
 	</ul>
 	<ul class="container">

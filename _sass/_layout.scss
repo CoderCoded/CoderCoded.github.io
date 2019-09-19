@@ -33,11 +33,9 @@
 
     .news-text {
       display: block;
-      float: left;
       width: 75%;
 
       @include breakpoint(mobile) {
-        float: none;
         width: 100%;
       }
     }
@@ -45,6 +43,7 @@
     .news-image {
       display: block;
       float: right;
+      text-align: right;
       width: 25%;
 
       @include breakpoint(mobile) {
@@ -57,12 +56,21 @@
         display: inline-block;
         margin: 0;
         padding: 0;
+        width: 100%;
       }
 
       img {
-        width: 300px;
+        width: 100%;
         height: auto;
         border: 1px solid $gray-lighter;
+
+        @include breakpoint(tablet) {
+          max-width: 288px;
+        }
+
+        @include breakpoint(mobile) {
+          max-width: 300px;
+        }
       }
     }
 

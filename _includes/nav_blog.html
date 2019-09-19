@@ -1,12 +1,13 @@
 <nav id="nav" class="blog-nav">
 	<ul class="container">
 		<li class="logo">
-			<a href="/">
-				<img src="/images/crcd_logo_flat_tp.png" alt="" />
+			<a href="{{ '/' | prepend: site.baseurl }}">
+				<img src="/images/crcd_logo_flat_tp.png" alt="" >
 			</a>
 		</li>
-		<li><a href="/#top">Home</a></li>
-		<li><a href="/#contact">Contact</a></li>
-		<li><a href="/blog/">Blog</a></li>
+		<li><a href="{{ '/#top' | prepend: site.baseurl }}">Home</a></li>
+		<li><a href="{{ '/#work' | prepend: site.baseurl }}">Work</a></li>
+		<li><a href="{{ '/#contact' | prepend: site.baseurl }}">Contact</a></li>
+		<li><a href="{{ '/blog/' | prepend: site.baseurl }}">Blog</a></li>
 	</ul>
 </nav>

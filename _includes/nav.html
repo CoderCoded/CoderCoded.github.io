@@ -1,7 +1,17 @@
 <nav id="nav">
+	{% assign url = page.url | remove:'index.html' %}
+	<ul style="position: fixed; right: 20px;">
+			<li>
+				<a href="{{ '/fi/' | prepend: site.baseurl }}"{% if url == '/fi/' %}class="nav-active"{% endif %}>fi</a>
+			</li>
+			<li>
+					<a href="{{ '/' | prepend: site.baseurl }}"{% if url == '/' %}class="nav-active"{% endif %}>en</a>
+			</li>
+	</ul>
 	<ul class="container">
 		<li><a href="#top">Top</a></li>
+		<li><a href="#work">Work</a></li>
 		<li><a href="#contact">Contact</a></li>
-		<li><a href="/blog/">Blog</a></li>
+		<li><a href="{{ '/blog/' | prepend: site.baseurl }}">Blog</a></li>
 	</ul>
 </nav>

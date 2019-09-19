@@ -42,7 +42,23 @@
   )
 ));
 
+/* Util */
+.h-100 {
+  height: 100% !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
 /* Basic */
+
+html {
+  display: block;
+}
 
 body, input, textarea, select {
   font-family: $font-family-base;
@@ -505,34 +521,6 @@ ol.default {
   background: #fff;
   box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
   text-align: center;
-}
-
-.box-featured {
-  min-height: 422px;
-}
-
-.box-sample {
-  min-height: 458px;
-}
-
-@include breakpoint(tablet) {
-  .box-featured {
-    min-height: 384px;
-  }
-
-  .box-sample {
-    min-height: 402px;
-  }
-}
-
-@include breakpoint(mobile) {
-  .box-featured {
-    min-height: 50px;
-  }
-
-  .box-sample {
-    min-height: 50px;
-  }
 }
 
 /* Icons */

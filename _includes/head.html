@@ -18,9 +18,10 @@
   <!--[if lte IE 9]><link rel="stylesheet" href="{{ "/css/ie9.css" | prepend: site.base_url }}" /><![endif]-->
 
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}" />
-  <link rel="alternate" href="{{ '/' | absolute_url }}" hreflang="en-us" />
-  <link rel="alternate" href="{{ '/fi/' | absolute_url }}" hreflang="fi-fi" />
-
+  {% if include.alternate %}
+  <link rel="alternate" href="{{ '/' | absolute_url }}" hreflang="fi-fi" />
+  <link rel="alternate" href="{{ '/en/' | absolute_url }}" hreflang="en-gb" />
+  {% endif %}
   <link rel="apple-touch-icon" sizes="57x57" href="{{ '/icons/apple-touch-icon-57x57.png?v=2' | prepend: site.base_url }}">
   <link rel="apple-touch-icon" sizes="60x60" href="{{ '/icons/apple-touch-icon-60x60.png?v=2' | prepend: site.base_url }}">
   <link rel="apple-touch-icon" sizes="72x72" href="{{ '/icons/apple-touch-icon-72x72.png?v=2' | prepend: site.base_url }}">

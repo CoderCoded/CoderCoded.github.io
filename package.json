@@ -9,10 +9,10 @@
     "start": "bundle exec jekyll serve --incremental",
     "checkout": "git clone https://github.com/CoderCoded/CoderCoded.github.io.git --branch master _site",
     "clean": "rm -rf _site/*",
-    "prod": "JEKYLL_ENV=production bundle exec jekyll build",
-    "build": "npm-run-all clean prod",
-    "clone": "npm-run-all clean checkout",
-    "release": "cd _site && git add --all && git commit -m \"Release at $(date -u +\"%Y-%m-%dT%H:%M:%SZ\")\""
+    "build-prod": "JEKYLL_ENV=production bundle exec jekyll build",
+    "release": "cd _site && git add --all && git commit -m \"Release at $(date -u +\"%Y-%m-%dT%H:%M:%SZ\")\"",
+    "build": "npm-run-all clean build-prod",
+    "clone": "npm-run-all clean checkout"
   },
   "repository": {
     "type": "git",

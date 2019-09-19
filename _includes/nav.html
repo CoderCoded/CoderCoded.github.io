@@ -1,6 +1,6 @@
 <nav id="nav">
 	{% assign url = page.url | remove:'index.html' %}
-	<ul style="position: fixed; right: 20px;">
+	<ul class="nav-lang-select">
 			<li>
 				<a href="{{ '/' | prepend: site.baseurl }}"{% if url == '/' %}class="nav-active"{% endif %}>fi</a>
 			</li>

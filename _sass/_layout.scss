@@ -34,7 +34,7 @@
     .news-text {
       display: block;
       float: left;
-      width: 70%;
+      width: 75%;
 
       @include breakpoint(mobile) {
         float: none;
@@ -45,7 +45,7 @@
     .news-image {
       display: block;
       float: right;
-      width: 30%;
+      width: 25%;
 
       @include breakpoint(mobile) {
         float: none;
@@ -160,6 +160,15 @@
 }
 
 /* Nav */
+
+.nav-active {
+  color: #00F000 !important;
+}
+
+.nav-lang-select {
+  position: fixed;
+  right: 20px;
+}
 
 #nav {
   background-color: $gray-darkest;
@@ -407,10 +416,6 @@
     }
   }
 
-  .nav-active {
-    color: #00F000 !important;
-  }
-
   /* Articles */
 
   #top {
@@ -462,6 +467,14 @@
     //     margin-left: 0;
     //   }
     // }
+  }
+
+  .box.style1 {
+    min-height: 540px;
+  }
+
+  .box.style2 {
+    min-height: 458px;
   }
 
 }
@@ -529,6 +542,13 @@
     padding: 2em 0 2em 0;
   }
 
+  .box.style1 {
+    min-height: 484px;
+  }
+
+  .box.style2 {
+    min-height: 428px;
+  }
 }
 
 /* Mobile */
@@ -689,8 +709,18 @@
 
   /* Nav */
   #nav {
+    font-size: 14pt;
+
     a {
       padding: 0.5em;
+    }
+
+    .nav-lang-select {
+      right: 10px;
+    }
+
+    & > .container {
+      text-align: left;
     }
   }
 
@@ -722,6 +752,11 @@
   }
 
 
+  .box.style1 {
+    min-height: none;
+  }
 
-
+  .box.style2 {
+    min-height: none;
+  }
 }

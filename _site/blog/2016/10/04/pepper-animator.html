@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Pepper animation workflow improvement</title>
+  <meta name="description" content="We had our first encounter with Pepper at Junction Asia in Tokyo. During the Junction Asia hackathon, we came up with some cool animation ideas for the robot...">
+
+  <style>
+    html {
+      display: none;
+    }
+  </style>
+
+  <!--[if lte IE 8]><script src="/js/ie/html5shiv.js"></script><![endif]-->
+  <link rel="stylesheet" href="/css/main.css?1568901969936808000">
+  <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
+  <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
+
+  <link rel="alternate" type="application/rss+xml" title="Coder Coded" href="https://www.codercoded.com/feed.xml" />
+  <link rel="alternate" href="https://www.codercoded.com/" hreflang="en-us" />
+  <link rel="alternate" href="https://www.codercoded.com/fi/" hreflang="fi-fi" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-touch-icon-57x57.png?v=2">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-touch-icon-60x60.png?v=2">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-touch-icon-72x72.png?v=2">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-touch-icon-76x76.png?v=2">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-touch-icon-114x114.png?v=2">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-touch-icon-120x120.png?v=2">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-touch-icon-144x144.png?v=2">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152x152.png?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon-180x180.png?v=2">
+  <link rel="icon" type="image/png" href="/icons/favicon-32x32.png?v=2" sizes="32x32">
+  <link rel="icon" type="image/png" href="/icons/favicon-194x194.png?v=2" sizes="194x194">
+  <link rel="icon" type="image/png" href="/icons/favicon-96x96.png?v=2" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icons/android-chrome-192x192.png?v=2" sizes="192x192">
+  <link rel="icon" type="image/png" href="/icons/favicon-16x16.png?v=2" sizes="16x16">
+  <link rel="manifest" href="/manifest.json?v=2">
+  <link rel="mask-icon" href="/icons/safari-pinned-tab.svg?v=2" color="#00a000">
+  <link rel="shortcut icon" href="/icons/favicon.ico?v=2">
+  <meta name="msapplication-TileColor" content="#00a000">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=2">
+  <meta name="theme-color" content="#00a000">
+
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Pepper animation workflow improvement | Coder Coded</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Pepper animation workflow improvement" />
+<meta property="og:locale" content="en_GB" />
+<meta name="description" content="A Unity application for controlling robot motion" />
+<meta property="og:description" content="A Unity application for controlling robot motion" />
+<link rel="canonical" href="https://www.codercoded.com/blog/2016/10/04/pepper-animator.html" />
+<meta property="og:url" content="https://www.codercoded.com/blog/2016/10/04/pepper-animator.html" />
+<meta property="og:site_name" content="Coder Coded" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-10-04T21:00:00+03:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.codercoded.com/blog/2016/10/04/pepper-animator.html"},"url":"https://www.codercoded.com/blog/2016/10/04/pepper-animator.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.codercoded.com/images/crcd_logo_flat_tp.png"}},"headline":"Pepper animation workflow improvement","dateModified":"2016-10-04T21:00:00+03:00","datePublished":"2016-10-04T21:00:00+03:00","description":"A Unity application for controlling robot motion","@type":"BlogPosting","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  <body>
+
+    <nav id="nav" class="blog-nav">
+	<ul class="container">
+		<li class="logo">
+			<a href="/">
+				<img src="/images/crcd_logo_flat_tp.png" alt="" >
+			</a>
+		</li>
+		<li><a href="/#top">Home</a></li>
+		<li><a href="/#work">Work</a></li>
+		<li><a href="/#contact">Contact</a></li>
+		<li><a href="/blog/">Blog</a></li>
+	</ul>
+</nav>
+
+
+
+    <div class="wrapper">
+      <article class="blog container">
+        <div class="row">
+          <div class="8u 12u$(mobile)">
+
+            <div class="post-content">
+
+  <div class="date">Oct 04, 2016</div>
+
+  <article class="box">
+
+    
+
+      <a href="https://vimeo.com/185363113" class="image aspect-ratio">
+        <iframe src="//player.vimeo.com/video/185363113?title=0&amp;byline=0&amp;portrait=0&amp;color=18a721" width="800" height="450" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+      </a>
+
+
+    
+
+    <h2 class="title">Pepper animation workflow improvement</h2>
+
+    
+      <h3>A Unity application for controlling robot motion</h3>
+    
+
+    <p>We had our first encounter with Pepper at <a href="https://blog.hackjunction.com/hacking-robots-in-japan-a86bc227bfd4">Junction Asia</a> in Tokyo. During the Junction Asia hackathon, we came up with some cool animation ideas for the robot. However, we realized that the default tools used to create animations for Pepper were a bit cumbersome, and there would not be enough time to come up with anything useful at the hackathon. After the hackathon we joined the Pepper developer program and since then we have learned a lot about Pepper and its tools. In this blog entry we talk about our solution to improve Pepper’s animation features.</p>
+
+<h3 id="how-animations-are-created-for-pepper">How animations are created for Pepper</h3>
+
+<p>Choregraphe (The Pepper’s development environment) has a timeline-based interface with keyframes and curves, similar to common animation programs. However, setting the robot’s pose for each keyframe is a slow process. When using a virtual robot, only forward kinematics (FK) are available. Setting values for each of the robot’s joints with a mouse is not very practical. A physical robot allows the user to manipulate the robot’s joints directly by twisting its arms, for example, but coming up with rich and realistic animations with this method is still very time consuming.</p>
+
+<h3 id="a-human-actor-to-speed-up-the-process">A human actor to speed-up the process</h3>
+
+<p>Professional animation workflows include, for example, motion capturing and blending together pre-recorded animations. Since we had some experience (Juha especially) with Kinect, we had an idea: could we use Kinect to track a human actor and convert the poses for Pepper?</p>
+
+<p>Soon we found out that a guy named <a href="https://github.com/malaybaku/">Atsushi Sugiyama</a> from Japan had already done <a href="http://www.baku-dreameater.net/archives/3951">an implementation for Kinect v2</a>. As we had a couple of older Kinects (v1) lying around, we tried to use those first with <a href="https://unity3d.com/">Unity</a>, which has assets for real-time motion capture using Kinect. Later on we upgraded to Kinect v2 as v1 has inferior skeletal tracking and noisier output when compared to v2.</p>
+
+<p>The problem with Kinect is the inaccurate tracking of hands and the head. Especially with Pepper, it is very important to track those parts accurately. A motion capture software for Kinect (and for many other devices, too) called <a href="http://ipisoft.com/">iPi Soft</a> supports PSMove controllers to improve head and hand tracking. This is a very inexpensive solution and fits perfectly to this case. <a href="https://github.com/HipsterSloth/psmove-unity5">Here</a> is a neat example (made by <a href="https://github.com/HipsterSloth">HipsterSloth</a>) of using <a href="http://thp.io/2010/psmove/">PS Move API</a> in Unity. The PS Move API removes the need for a PS console.</p>
+
+<h3 id="our-solution">Our solution</h3>
+
+<p>We use Kinect v2 to generate a digital skeleton of a human actor. The skeletal data is sent to Unity and used as the skeleton for a humanlike virtual character, roughly the size of Pepper.</p>
+
+<p>We also have a separate virtual model of Pepper. It has all the joints that Pepper has (as they are with their limitations) but not a skeletal humanlike structure. The Pepper model tries to mimic the poses of the virtual character using Inverse Kinematics (IK). This model’s joint data is then sent to NaoQI (robot’s OS) using UDP.</p>
+
+<p>Choregraphe has tools for recording the motion of the robot (a physical or a virtual one). The recording can then be used as a base for the animation. As can be seen in the video, the system is quite useful already. We use it whenever we need to create custom animations for the robot.</p>
+
+
+    <!-- <a href="/blog/2016/10/04/pepper-animator.html">Read more</a>  -->
+
+  </article>
+
+</div>
+
+          </div>
+
+          <div class="4u 12u$(mobile)">
+            <div id="sidebar">
+
+              <!-- Sidebar -->
+                <section>
+                  <h3>Coder Coded Blog</h3>
+                  <p>This blog is for posting news about our work and stuff we encounter during hacking.</p>
+                  <footer>
+                    <a href="/#work" class="button">Check out what we do</a>
+                  </footer>
+                </section>
+
+                <section>
+                  <h3>Latest posts</h3>
+                  <ul class="style2">
+                      
+                       <li>
+                         <span>Oct 04, 2016</span> &raquo; <a href="/blog/2016/10/04/pepper-animator.html"> Pepper animation workflow improvement</a>  
+                       </li>
+                      
+                       <li>
+                         <span>Aug 03, 2016</span> &raquo; <a href="/blog/2016/08/03/pepper-developer-partner.html"> Need an app for Pepper robot?</a>  
+                       </li>
+                      
+                       <li>
+                         <span>Nov 09, 2015</span> &raquo; <a href="/blog/2015/11/09/fear-of-flying.html"> Our winning hack - Fear of Flying</a>  
+                       </li>
+                    
+                  </ul>
+                </section>
+
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+
+    <div id="site-footer" class="wrapper style4">
+  <footer>
+
+    <h4>Find us on:</h4>
+
+    <ul class="social">
+      <li><a href="https://github.com/CoderCoded" class="icon fa fa-github"><span class="label">Github</span></a></li>
+      <li><a href="https://twitter.com/codercoded" class="icon fa fa-twitter"><span class="label">Twitter</span></a></li>
+      <li><a href="https://vimeo.com/codercoded" class="icon fa fa-vimeo"><span class="label">Vimeo</span></a></li>
+    </ul>
+
+    <p id="#copyright">&copy; Coder Coded Oy 2019. Site template based on <a href="http://html5up.net/miniport">Miniport</a> by <a href="http://n33.co/">n33</a>, used under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY</a>.</p>
+
+  </footer>
+</div>
+
+
+    <script src="/js/jquery.min.js"></script>
+<script src="/js/jquery.scrolly.min.js"></script>
+<script src="/js/skel.min.js"></script>
+<script src="/js/skel-viewport.min.js"></script>
+<script src="/js/humane.min.js"></script>
+<script src="/js/liga.js"></script>
+<script src="/js/util.js"></script>
+<!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->
+<script src="/js/main.js?1568901969936808000"></script>
+
+
+  </body>
+
+</html>

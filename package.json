@@ -12,7 +12,7 @@
     "prod": "JEKYLL_ENV=production bundle exec jekyll build",
     "build": "npm-run-all clean prod",
     "clone": "npm-run-all clean checkout",
-    "release": "cd dist && git add --all && git commit -m \"Release at $(date -u +\"%Y-%m-%dT%H:%M:%SZ\")\""
+    "release": "cd _site && git add --all && git commit -m \"Release at $(date -u +\"%Y-%m-%dT%H:%M:%SZ\")\""
   },
   "repository": {
     "type": "git",

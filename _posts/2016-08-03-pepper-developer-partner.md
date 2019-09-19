@@ -2,10 +2,12 @@
 layout: post
 title:  "Need an app for Pepper robot?"
 subtitle: "Coder Coded becomes Finland's first Pepper&nbsp;Developer&nbsp;Partner"
+description: "Coder Coded becomes Finland's first Pepper Developer Partner"
 date:   2016-08-03 08:00:00
 categories: blog
 image: crcd_pepper_1.jpg
 image_alt: "Pepper is the most advanced humanoid robot currently available"
+lang: en_GB
 ---
 
 We are proud to announce that we have become the first Finnish company to join the SoftBank Robotics Pepper Partners Program. We are well underway in developing our first apps, and we have been getting acquainted with our development unit for some time now.

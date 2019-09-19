@@ -2,10 +2,12 @@
 layout: post
 title:  "Pepper animation workflow improvement"
 subtitle: "A Unity application for controlling robot motion"
+description: "A Unity application for controlling robot motion"
 date: 2016-10-04 18:00:00
 categories: blog
 vimeo_id: 185363113
 vimeo_url: https://vimeo.com/185363113
+lang: en_GB
 ---
 
 We had our first encounter with Pepper at [Junction Asia](https://blog.hackjunction.com/hacking-robots-in-japan-a86bc227bfd4) in Tokyo. During the Junction Asia hackathon, we came up with some cool animation ideas for the robot. However, we realized that the default tools used to create animations for Pepper were a bit cumbersome, and there would not be enough time to come up with anything useful at the hackathon. After the hackathon we joined the Pepper developer program and since then we have learned a lot about Pepper and its tools. In this blog entry we talk about our solution to improve Pepper's animation features.

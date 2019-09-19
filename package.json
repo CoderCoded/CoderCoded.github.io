@@ -5,7 +5,10 @@
   "private": true,
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "bundle exec jekyll serve --incremental",
+    "build": "JEKYLL_ENV=production bundle exec jekyll build",
+    "deploy": "git subtree push --prefix _site origin master"
   },
   "repository": {
     "type": "git",

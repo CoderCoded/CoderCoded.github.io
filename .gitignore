@@ -7,3 +7,5 @@ config/production.yml
 .jekyll-metadata
 
 *.log
+
+.DS_Store

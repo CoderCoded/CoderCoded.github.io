@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Coder Coded</title>
-    <description>We craft code.
+    <description>Pepper the robot application development and interactive installations.
 </description>
     <link>https://www.codercoded.com/</link>
     <atom:link href="https://www.codercoded.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 05 Oct 2016 12:31:49 +0300</pubDate>
-    <lastBuildDate>Wed, 05 Oct 2016 12:31:49 +0300</lastBuildDate>
-    <generator>Jekyll v3.2.1</generator>
+    <pubDate>Thu, 19 Sep 2019 13:53:32 +0300</pubDate>
+    <lastBuildDate>Thu, 19 Sep 2019 13:53:32 +0300</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>Pepper animation workflow improvement</title>
@@ -106,15 +106,13 @@ aviophobic people during flights.&lt;/p&gt;
 designed a set of apps that utilize an accelerometer attached to the web
 server and the in-flight portal that provides the landing page for passengers
 using the airplane wi-fi. We have produced 4 different apps to give you an
-idea. Check out the &lt;a href=&quot;http://aero.codercoded.com&quot;&gt;slideshow online&lt;/a&gt;.&lt;/p&gt;
+idea.&lt;/p&gt;
 
 &lt;h4 id=&quot;turbulence-meter&quot;&gt;Turbulence meter&lt;/h4&gt;
 
 &lt;p&gt;Airplanes can take much more than what people experience during turbulence.
 This meter displays the “safe zone” for airplane and plots the currently
-experienced g-forces. Demo online
-&lt;a href=&quot;http://aero.codercoded.com/turbulence/&quot;&gt;here&lt;/a&gt;, &lt;em&gt;emulate accelerometer from
-devtools, or view with mobile device.&lt;/em&gt;&lt;/p&gt;
+experienced g-forces.&lt;/p&gt;
 
 &lt;h4 id=&quot;mood-meter&quot;&gt;Mood meter&lt;/h4&gt;
 
@@ -123,9 +121,7 @@ using the passenger mood-meter. It is embarrassing to talk directly to flight
 attendants about your fears when other people are listening. The mood-meter is
 a very subtle way to inform cabin crew about the level of anxiety of the
 passenger, and also the reason - another passenger makes you feel
-uncomfortable, or you’re afraid of current flight conditions. Check out the
-&lt;a href=&quot;http://aero.codercoded.com/seatmap/&quot;&gt;cabin crew view&lt;/a&gt; or &lt;a href=&quot;http://aero.codercoded.com/slider/&quot;&gt;passenger
-app&lt;/a&gt; demos online.&lt;/p&gt;
+uncomfortable, or you’re afraid of current flight conditions.&lt;/p&gt;
 
 &lt;p&gt;Cabin crew view shows a “seatmap heatmap” of passenger anxiety levels, making
 it possible for cabin crew to react in situations during flight.&lt;/p&gt;
@@ -142,9 +138,7 @@ sounds they’re hearing are perfectly normal&lt;/p&gt;
 &lt;p&gt;We think that turbulence should be &lt;em&gt;anticipated&lt;/em&gt; by the passengers. It is our
 job to come up with ideas that get into life only during turbulence. There
 could be games or similar that provide rewards during it, or something like we
-envisioned with wobbly faces / things. Couple of demos:
-&lt;a href=&quot;http://aero.codercoded.com/fun/&quot;&gt;Kekkonen&lt;/a&gt; and an
-&lt;a href=&quot;http://aero.codercoded.com/boobs/&quot;&gt;NSFW&lt;/a&gt; version.&lt;/p&gt;
+envisioned with wobbly faces / things.&lt;/p&gt;
 
 &lt;h3 id=&quot;what-next&quot;&gt;What next?&lt;/h3&gt;
 

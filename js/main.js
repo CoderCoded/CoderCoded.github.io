@@ -4,7 +4,27 @@
   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-(function($) {
+(function ($) {
+  'use strict'
+  /* global humane, skel */
+  function getFormData ($form) {
+    var serialized = $form.serializeArray()
+    var res = {}
+
+    $.each(serialized, function (idx, val) {
+      res[val.name] = val.value
+    })
+
+    return res
+  }
+
+  function disableSubmit () {
+    $('input[type="submit"]').attr('disabled', 'disabled')
+  }
+
+  function enableSubmit () {
+    $('input[type="submit"]').removeAttr('disabled')
+  }
 
   skel
     .breakpoints({
@@ -18,73 +38,82 @@
           width: 1080
         }
       }
-    });
+    })
 
-  $(function() {
-
-    var $window = $(window),
-      $body = $('body');
-
-    // Disable animations/transitions until the page has loaded.
-      $body.addClass('is-loading');
-
-      $window.on('load', function() {
-        $body.removeClass('is-loading');
-      });
-
-    // Fix: Placeholder polyfill.
-      $('form').placeholder();
-
-    // Prioritize "important" elements on mobile.
-      skel.on('+mobile -mobile', function() {
-        $.prioritize(
-          '.important\\28 mobile\\29',
-          skel.breakpoint('mobile').active
-        );
-      });
+  $(function () {
+    // Placeholder polyfill.
+    $('form').placeholder()
 
     // CSS polyfills (IE<9).
-      if (skel.vars.IEVersion < 9)
-        $(':last-child').addClass('last-child');
+    if (skel.vars.IEVersion < 9) {
+      $(':last-child').addClass('last-child')
+    }
 
     // Scrolly.
-      $window.load(function() {
-
-        $('#nav a, .scrolly').scrolly({
-          speed: 1000,
-          offset: $('#nav').height() - 2
-        });
-
-      });
-
-      $('#contact-form').on('submit', function(e) {
-        e.preventDefault();
-
-        var form = e.target;
-        var $form = $(form);
-
-        // Use Ajax to submit form data
-        $.ajax({
-          url: $form.attr('action'),
-          type: 'POST',
-          data: $form.serialize(),
-          success: function(result) {
-            humane.log('Message sent successfully.', { addnCls: 'humane-bigbox-success' });
-            form.reset();
-          },
-          error: function(res) {
-
-            var err = 'Error sending form.'
-
-            if (res.status === 400 || res.status === 500) {
-              err = res.responseText
-            }
-
-            humane.log(err, { addnCls: 'humane-bigbox-error' });
-          }
-        });
+    $(window).load(function () {
+      $('#nav a, .scrolly').scrolly({
+        speed: 1000,
+        offset: $('#nav').height() - 2
       })
+    })
 
-  });
+    $('#contact-form').on('submit', function (e) {
+      e.preventDefault()
 
-})(jQuery);
+      disableSubmit()
+
+      var form = e.target
+      var $form = $(form)
+      var data = getFormData($form)
+      var payload = {
+        subject: '[Codercoded Contact Form] ' + data.subject,
+        body: '\nName: ' + data.subject + '\nEmail: ' + data.email + '\n\n ' + data.body,
+        email: data.email
+      }
+
+      var success = function onSuccess (result) {
+        humane.log(
+          'Message sent!',
+          {
+            addnCls: 'humane-bigbox-success',
+            clickToClose: true,
+            timeout: 4000
+          },
+          function callback () {
+            enableSubmit()
+            form.reset()
+          })
+      }
+
+      var error = function onError (res) {
+        var err = ['Error sending your message.']
+
+        if (res.status === 400 || res.status === 500) {
+          err.push(res.responseText)
+        }
+
+        humane.log(
+          err,
+          {
+            addnCls: 'humane-bigbox-error',
+            clickToClose: true,
+            timeout: 4000
+          },
+          function callback () {
+            enableSubmit()
+          }
+        )
+      }
+
+      $.ajax({
+        url: $form.attr('action'),
+        type: 'POST',
+        data: JSON.stringify(payload),
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        success: success,
+        error: error
+      })
+    })
+  })
+})(window.jQuery)
